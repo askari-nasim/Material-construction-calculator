@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Scaffold calculator</title>
+</head>
+
+<body>
+    <div class="title text-center mb-5">
+        <h1>Gerüst Rechner</h1>
+        <p>wie mann Gerüst berechnen kann?</p>
+    </div>
+    <hr>
+    <main class="container mt-5">
+        <div class="select-frame m-3">
+            <input type="radio" value="70" class="btn-check frame-70" name="options-outlined" id="success-outlined"
+                autocomplete="off" checked>
+            <label class="btn btn-outline-success" for="success-outlined">Rahmen 70er</label>
+            <input type="radio" value="100" class="btn-check frame-100" name="options-outlined" id="danger-outlined"
+                autocomplete="off">
+            <label class="btn btn-outline-success" for="danger-outlined">Rahmen 100er</label>
+        </div>
+        <form>
+            <div class="enter-length my-5 mx-3">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">*Länge der gesamte Baustelle</label>
+                    <input type="number" class="form-control length-input" id="exampleFormControlInput1"
+                        placeholder="Meter">
+                    <span class="text-danger d-none length-validation"></span>
+                    <div class="form-text">Die Länge der Baustelle sollte zwischen 1m und 99m Metern liegen.</div>
+                </div>
+            </div>
+        </form>
+        <div class="mx-3 my-5">
+            <label for="exampleDataList" class="form-label">*Hoch der Baustelle</label>
+            <div class="select-wrapper d-flex align-items-center">
+                <select class="form-select high-select" aria-label="Default select example">
+                    <option value="-1" selected disabled>*Hoch der Baustelle</option>
+                    <option value="2">2 Meter</option>
+                    <option value="3">3 Meter</option>
+                    <option value="4">4 Meter</option>
+                    <option value="5">5 Meter</option>
+                    <option value="6">6 Meter</option>
+                    <option value="7">7 Meter</option>
+                    <option value="8">8 Meter</option>
+                    <option value="9">9 Meter</option>
+                    <option value="10">10 Meter</option>
+                </select>
+
+                <select class="form-select ms-3 half-height" aria-label="Disabled select example" disabled>
+                    <option selected>Number der Lage</option>
+                </select>
+            </div>
+            <span class="text-danger d-none height-validation">Wert eingeben</span>
+
+        </div>
+        <div class="mx-3 my-5">
+            <label for="exampleDataList" class="form-label">*Hauptfeld Länge</label>
+            <select class="form-select main-length-select" aria-label="Default select example">
+                <option selected value="-1">Länge der Hauptfeld</option>
+                <option value="3">3 Meter</option>
+                <option value="2.5">2.5 Meter</option>
+                <option value="2">2 Meter</option>
+            </select>
+            <span class="text-danger d-none mainfield-validation">Wert eingeben</span>
+
+        </div>
+        <div class="mx-3 my-5">
+            <label for="exampleDataList" class="form-label">*Bläge</label>
+            <select class="form-select type-select" aria-label="Default select example">
+                <option value="-1" selected>Art der Bläge</option>
+                <option value="Holz">Holz</option>
+                <option value="Stahl">Stahl</option>
+            </select>
+            <span class="text-danger d-none type-validation">Wert eingeben</span>
+        </div>
+        <div class="mx-3 my-5">
+            <label class="form-label">*Fuß</label>
+            <select class="form-select foot-select" aria-label="Default select example">
+                <option selected value="-1">Groß der Fuß</option>
+                <option value="40">40er</option>
+                <option value="60">60er</option>
+                <option value="80">80er</option>
+                <option value="100">100er</option>
+            </select>
+            <span class="text-danger d-none foot-validation">Wert eingeben</span>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 my-4">
+                    <label for="exampleFormControlInput1" class="form-label">Benötigen Sie die G-Kupplungen?</label>
+                    <input type="number" class="form-control G-coupling" id="exampleFormControlInput1"
+                        placeholder="Wie viele?">
+                </div>
+                <div class="col-md-6 my-4">
+                    <label for="exampleFormControlInput1" class="form-label">Benötigen Sie die F-Kupplungen?</label>
+                    <input type="number" class="form-control F-coupling" id="exampleFormControlInput1"
+                        placeholder="Wie viele?">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 my-4">
+                    <label for="exampleFormControlInput1" class="form-label">Benötigen Sie die D-Kupplungen?</label>
+                    <input type="number" class="form-control D-coupling" id="exampleFormControlInput1"
+                        placeholder="Wie viele?">
+                </div>
+                <div class="col-md-6 my-4">
+                    <label for="exampleFormControlInput1" class="form-label">Benötigen Sie die Bb-Kupplungen?</label>
+                    <input type="number" class="form-control Bb-coupling" id="exampleFormControlInput1"
+                        placeholder="Wie viele?">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 my-4">
+                    <label for="exampleFormControlInput1" class="form-label">Benötigen Sie die 70er Travers?</label>
+                    <input type="number" class="form-control travers-70er" id="exampleFormControlInput1"
+                        placeholder="Wie viele?">
+                </div>
+                <div class="col-md-6 my-4">
+                    <label for="exampleFormControlInput1" class="form-label">Benötigen Sie die 100er Travers?</label>
+                    <input type="number" class="form-control travers-100er" id="exampleFormControlInput1"
+                        placeholder="Wie viele?">
+                </div>
+            </div>
+        </div>
+        <div class="result-btn m-3">
+            <button type="button" class="btn btn-success mt-3 cal-btn">rechnen</button>
+        </div>
+
+        <div class="modal fade" id="resultModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">Material List</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            onclick="closeModal()"></button>
+                    </div>
+                    <div class="modal-body pdf-form">
+                        <div class="row">
+                            <div class="col-md-6 ms-auto d-flex flex-column left-col">
+                                <div class="d-flex justify-content-between px-2 py-1 required">
+                                    <div>Rahmen (<span class="frame-er-unit-modal"></span>):</div>
+                                    <div id="frame"></div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center px-2 py-1 required">
+                                    <div>Belage (<span class="meter-unit-modal"></span>) <span class="blage-type-modal"></span>:</div>
+                                    <div id="sheet"></div>
+                                </div>
+                                <div class="d-flex justify-content-between px-2 py-1 required">
+                                    <div>Leitergang (<span class="meter-unit-modal"></span>):</div>
+                                    <div id="ladder"></div>
+                                </div>
+                                <div class="d-flex justify-content-between px-2 py-1 required">
+                                    <div>Gelander (<span class="meter-unit-modal"></span>):</div>
+                                    <div id="railing"></div>
+                                </div>
+                                <div class="d-flex justify-content-between px-2 py-1 required">
+                                    <div>Bordbrett (<span class="meter-unit-modal"></span>):</div>
+                                    <div id="woodguard"></div>
+                                </div>
+                                <div class="d-flex justify-content-between px-2 py-1 required">
+                                    <div>Diagonale (<span class="meter-unit-modal"></span>):</div>
+                                    <div id="diagonale"></div>
+                                </div>
+                                <div class="d-flex justify-content-space-between px-2 py-1 required">
+                                    <div>Fube (<span class="fube-er-unit-modal"></span>):</div>
+                                    <div id="foot"></div>
+                                </div>
+                                <div class="d-flex justify-content-space-between px-2 py-1 required">
+                                    <div>Roste (<span class="meter-unit-modal"></span>):</div>
+                                    <div id="board"></div>
+                                </div>
+                                <div class="d-flex justify-content-between px-2 py-1 required">
+                                    <div>Meterbock (<span class="frame-er-unit-modal"></span>):</div>
+                                    <div id="meterbock"></div>
+                                </div>
+                                <div class="d-flex justify-content-between px-2 py-1 required">
+                                    <div>Affen (<span class="frame-er-unit-modal"></span>):</div>
+                                    <div id="fence"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ms-auto d-flex flex-column right-col">
+                                <div class="d-flex justify-content-space-between px-2 py-1 optional">
+                                    <div>G-Kupplungen: </div>
+                                    <div id="g-coupling"></div>
+                                </div>
+                                <div class="d-flex justify-content-space-between px-2 py-1 optional">
+                                    <div>F-Kupplungen: </div>
+                                    <div id="f-coupling"></div>
+                                </div>
+                                <div class="d-flex justify-content-space-between px-2 py-1 optional">
+                                    <div>D-Kupplungen: </div>
+                                    <div id="d-coupling"></div>
+                                </div>
+                                <div class="d-flex justify-content-space-between px-2 py-1 optional">
+                                    <div>G-Kupplungen: </div>
+                                    <div id="b-coupling"></div>
+                                </div>
+                                <div class="d-flex justify-content-space-between px-2 py-1 optional">
+                                    <div>70er Travers: </div>
+                                    <div id="travers-70"></div>
+                                </div>
+                                <div class="d-flex justify-content-space-between px-2 py-1 optional">
+                                    <div>100er Travers: </div>
+                                    <div id="travers-100"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
+                        <button type="button" class="btn btn-primary pdf-btn" onclick="generatePdf()">PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop fade in d-none"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/vfs_fonts.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

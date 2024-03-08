@@ -1,0 +1,22 @@
+/* reset styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* styles for result modal */
+.left-col,.right-col{
+    padding: 0 5%;
+}
+
+.left-col div.required:nth-child(even),
+.right-col div.optional:nth-child(even){
+    background: rgb(230, 230, 230);
+}
+
+.left-col div.required,.right-col div.optional{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
